@@ -1,0 +1,3731 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for the Chosen of the Harvest Unity template — a complete code-driven action-roguelike and sanctuary-management framework you can reskin and ship.">
+      
+      
+        <meta name="author" content="camenduru">
+      
+      
+        <link rel="canonical" href="https://camenduru.github.io/ChosenOfTheHarvestDoc/reference/catalogs/">
+      
+      
+        <link rel="prev" href="../core/">
+      
+      
+        <link rel="next" href="../dungeon/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Catalogs API - Chosen of the Harvest — Unity Template Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#catalogs-api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Chosen of the Harvest — Unity Template Docs" class="md-header__button md-logo" aria-label="Chosen of the Harvest — Unity Template Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Chosen of the Harvest — Unity Template Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Catalogs API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/camenduru/ChosenOfTheHarvestDoc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    camenduru/ChosenOfTheHarvestDoc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/hub-and-companions/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../customization/rebranding/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Customization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architecture/overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../core/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../publishing/building/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Publishing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../faq/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Help
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Chosen of the Harvest — Unity Template Docs" class="md-nav__button md-logo" aria-label="Chosen of the Harvest — Unity Template Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Chosen of the Harvest — Unity Template Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/camenduru/ChosenOfTheHarvestDoc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    camenduru/ChosenOfTheHarvestDoc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your First Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/project-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/hub-and-companions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Harvesthold Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/expeditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expeditions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/combat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combat & Wardens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/building/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building & Sanctums
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/economy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Economy & Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/ceremonies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ceremonies & Omens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/quests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campaign & Quests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/save-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Saving & Loading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Localization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/hud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HUD Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/rebranding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rebranding the Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/art/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Replacing Art
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Replacing Audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balancing & Tuning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/adding-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Content
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input & Rebinding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/bootstrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootstrap & Game Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/state-and-save/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    State & Save Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/systems-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogs API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogs API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-catalogs-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the catalogs work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#armamentcatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ArmamentCatalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armamentdef" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ArmamentDef
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ritecatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RiteCatalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ritedefinition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RiteDefinition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heirloomcatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HeirloomCatalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heirloomdefinition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HeirloomDefinition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attirecatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AttireCatalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attireslot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AttireSlot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attiredefinition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AttireDefinition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#companioncatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CompanionCatalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#companiontrait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CompanionTrait
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanctumtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SanctumType
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#omendeck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OmenDeck
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dungeon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dungeon API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../followers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Followers API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../localization-keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Localization Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Publishing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publishing/building/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Players
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publishing/asset-store/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset Store Submission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License & Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-catalogs-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the catalogs work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#armamentcatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ArmamentCatalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armamentdef" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ArmamentDef
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ritecatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RiteCatalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ritedefinition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RiteDefinition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heirloomcatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HeirloomCatalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heirloomdefinition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HeirloomDefinition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attirecatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AttireCatalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attireslot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AttireSlot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attiredefinition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AttireDefinition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#companioncatalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CompanionCatalog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#companiontrait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CompanionTrait
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanctumtype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SanctumType
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#omendeck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OmenDeck
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="catalogs-api-reference">Catalogs API reference<a class="headerlink" href="#catalogs-api-reference" title="Permanent link">&para;</a></h1>
+<p>Every number the player can feel — weapon rhythm, rite damage, heirloom bonuses,
+armour effects, companion traits, building costs — lives in a static catalog
+class rather than in the systems that use them.</p>
+<h2 id="how-the-catalogs-work">How the catalogs work<a class="headerlink" href="#how-the-catalogs-work" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A catalog is a <code>public static class</code> with <code>readonly</code> entries and a <code>Get(id)</code>
+  lookup; entries are plain C# objects, not <code>ScriptableObject</code>s.</li>
+<li>The equipped identity is a string id on <code>HarvestSaveData</code> (<code>weaponType</code>,
+  <code>riteType</code>, <code>armorId</code>, <code>charmId</code>), resolved through the catalog on demand.</li>
+<li>Unknown ids never throw: weapons and rites fall back to the first entry,
+  heirlooms and attire to <code>null</code>.</li>
+<li>Because <code>HarvestState</code> computes bonuses from the same ids, adding an entry
+  requires adding its effect in <code>GameState.cs</code>; the table alone is not enough.</li>
+</ul>
+<h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
+<h3 id="armamentcatalog">ArmamentCatalog<a class="headerlink" href="#armamentcatalog" title="Permanent link">&para;</a></h3>
+<p><code>Combat/WeaponCatalog.cs</code> — twelve armaments, each with its own rhythm, arc and
+on-hit effect.</p>
+<p><strong>Entries</strong></p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Damage</th>
+<th>Cooldown</th>
+<th>Range</th>
+<th>Combo</th>
+<th>On-hit effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sword</code></td>
+<td>Rose Saber</td>
+<td>25</td>
+<td>0.34</td>
+<td>1.9</td>
+<td>3</td>
+<td>none; balanced arc (<code>0.15</code>)</td>
+</tr>
+<tr>
+<td><code>axe</code></td>
+<td>Golden Axe</td>
+<td>42</td>
+<td>0.58</td>
+<td>2.05</td>
+<td>1</td>
+<td>slow ×0.55 for 1.3 s</td>
+</tr>
+<tr>
+<td><code>dagger</code></td>
+<td>Fan Blade</td>
+<td>13</td>
+<td>0.19</td>
+<td>1.45</td>
+<td>4</td>
+<td>bleed 3 dps for 3.5 s</td>
+</tr>
+<tr>
+<td><code>spear</code></td>
+<td>Silk Lance</td>
+<td>30</td>
+<td>0.42</td>
+<td>2.65</td>
+<td>2</td>
+<td>none; narrow arc (<code>0.55</code>)</td>
+</tr>
+<tr>
+<td><code>hammer</code></td>
+<td>Bell Hammer</td>
+<td>52</td>
+<td>0.88</td>
+<td>2.15</td>
+<td>1</td>
+<td>slow ×0.45 for 1.6 s, hits all</td>
+</tr>
+<tr>
+<td><code>gauntlets</code></td>
+<td>Thorn Claws</td>
+<td>9</td>
+<td>0.14</td>
+<td>1.25</td>
+<td>5</td>
+<td>lifesteal 1</td>
+</tr>
+<tr>
+<td><code>scythe</code></td>
+<td>Crescent Scythe</td>
+<td>36</td>
+<td>0.50</td>
+<td>2.5</td>
+<td>2</td>
+<td>bleed 2 dps for 3 s</td>
+</tr>
+<tr>
+<td><code>mace</code></td>
+<td>Sunburst Mace</td>
+<td>58</td>
+<td>1.00</td>
+<td>2.0</td>
+<td>1</td>
+<td>slow ×0.4 for 2 s, hits all</td>
+</tr>
+<tr>
+<td><code>flail</code></td>
+<td>Chain of Petals</td>
+<td>38</td>
+<td>0.72</td>
+<td>2.35</td>
+<td>2</td>
+<td>slow ×0.5 for 1.4 s, hits all</td>
+</tr>
+<tr>
+<td><code>rapier</code></td>
+<td>Glass Rapier</td>
+<td>20</td>
+<td>0.22</td>
+<td>2.2</td>
+<td>4</td>
+<td>none; narrow thrust (<code>0.5</code> arc)</td>
+</tr>
+<tr>
+<td><code>cleaver</code></td>
+<td>Jade Cleaver</td>
+<td>46</td>
+<td>0.66</td>
+<td>1.85</td>
+<td>2</td>
+<td>bleed 5 dps for 4 s</td>
+</tr>
+<tr>
+<td><code>halberd</code></td>
+<td>Royal Halberd</td>
+<td>40</td>
+<td>0.55</td>
+<td>2.8</td>
+<td>2</td>
+<td>none; longest reach (<code>2.8</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Members</strong></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>All</code></td>
+<td><code>ArmamentDef[]</code></td>
+<td>All twelve, in enum order</td>
+</tr>
+<tr>
+<td><code>Sword</code> … <code>Halberd</code></td>
+<td><code>ArmamentDef</code></td>
+<td>Named static entries</td>
+</tr>
+<tr>
+<td><code>Current</code></td>
+<td><code>ArmamentDef</code></td>
+<td><code>Get(HarvestState.Data.weaponType)</code></td>
+</tr>
+<tr>
+<td><code>Get(string id)</code></td>
+<td><code>ArmamentDef</code></td>
+<td>Exact id match, otherwise <code>Sword</code></td>
+</tr>
+<tr>
+<td><code>Next()</code></td>
+<td><code>ArmamentDef</code></td>
+<td>Wraps to the next entry in <code>All</code></td>
+</tr>
+</tbody>
+</table>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">HarvestState</span><span class="p">.</span><span class="n">Data</span><span class="p">.</span><span class="n">weaponType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"hammer"</span><span class="p">;</span><span class="w">      </span><span class="c1">// choosing by id</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HarvestState</span><span class="p">.</span><span class="n">WeaponDamage</span><span class="p">;</span><span class="w">        </span><span class="c1">// resolves the catalog for you</span>
+</span></code></pre></div>
+<h3 id="armamentdef">ArmamentDef<a class="headerlink" href="#armamentdef" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Type</code></td>
+<td><code>ArmamentType</code></td>
+<td>Enum tag (<code>Sword</code> … <code>Halberd</code>)</td>
+</tr>
+<tr>
+<td><code>Id</code></td>
+<td><code>string</code></td>
+<td>Save id</td>
+</tr>
+<tr>
+<td><code>Name</code></td>
+<td><code>string</code></td>
+<td>Display name</td>
+</tr>
+<tr>
+<td><code>BaseDamage</code></td>
+<td><code>int</code></td>
+<td>Base before <code>HarvestState.WeaponDamage</code> bonuses</td>
+</tr>
+<tr>
+<td><code>Cooldown</code></td>
+<td><code>float</code></td>
+<td>Seconds between swings, scaled by <code>AttackCooldownMultiplier</code></td>
+</tr>
+<tr>
+<td><code>Range</code></td>
+<td><code>float</code></td>
+<td>Hit radius; the check allows <code>Range + 0.35</code></td>
+</tr>
+<tr>
+<td><code>ArcDot</code></td>
+<td><code>float</code></td>
+<td>Minimum facing dot; higher is narrower, <code>-1</code> is a full circle</td>
+</tr>
+<tr>
+<td><code>Knockback</code></td>
+<td><code>float</code></td>
+<td>Impulse applied to each target</td>
+</tr>
+<tr>
+<td><code>ComboCount</code></td>
+<td><code>int</code></td>
+<td>Swing cycle length</td>
+</tr>
+<tr>
+<td><code>ComboWindow</code></td>
+<td><code>float</code></td>
+<td>Seconds before the combo resets</td>
+</tr>
+<tr>
+<td><code>Lunge</code></td>
+<td><code>float</code></td>
+<td>Forward step per swing</td>
+</tr>
+<tr>
+<td><code>BleedDps</code> / <code>BleedDuration</code></td>
+<td><code>float</code></td>
+<td>Damage-over-time applied on hit</td>
+</tr>
+<tr>
+<td><code>SlowFactor</code> / <code>SlowDuration</code></td>
+<td><code>float</code></td>
+<td>Slow multiplier and its duration</td>
+</tr>
+<tr>
+<td><code>HitsAll</code></td>
+<td><code>bool</code></td>
+<td>Skips the arc test and hits every target in range</td>
+</tr>
+<tr>
+<td><code>Lifesteal</code></td>
+<td><code>int</code></td>
+<td>Health restored per target hit</td>
+</tr>
+<tr>
+<td><code>Tint</code></td>
+<td><code>Color</code></td>
+<td>Swing VFX colour</td>
+</tr>
+</tbody>
+</table>
+<p>Combo swings add <code>+15%</code> damage per combo index (<code>comboIndex * 0.15</code>); the
+critical roll happens once for the whole swing, not per target.</p>
+<h3 id="ritecatalog">RiteCatalog<a class="headerlink" href="#ritecatalog" title="Permanent link">&para;</a></h3>
+<p><code>Combat/SpellCatalog.cs</code> — three rites, cast with X and cycled with Z. All are
+available from the start.</p>
+<p><strong>Entries</strong></p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Cooldown</th>
+<th>Damage</th>
+<th>Radius</th>
+<th>Knockback</th>
+<th>Extra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>smite</code></td>
+<td>Sunburst</td>
+<td>7.5</td>
+<td>34</td>
+<td>3.5</td>
+<td>4.5</td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>frost</code></td>
+<td>Shroud of Frost</td>
+<td>8.5</td>
+<td>18</td>
+<td>4.1</td>
+<td>1.5</td>
+<td>slow ×0.42 for 2.8 s</td>
+</tr>
+<tr>
+<td><code>blood</code></td>
+<td>Crimson Vow</td>
+<td>9.5</td>
+<td>22</td>
+<td>3.2</td>
+<td>2.0</td>
+<td>heals 5 per target hit</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Members</strong></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>All</code></td>
+<td><code>RiteDefinition[]</code></td>
+<td><code>Smite</code>, <code>Frost</code>, <code>Blood</code></td>
+</tr>
+<tr>
+<td><code>Smite</code> / <code>Frost</code> / <code>Blood</code></td>
+<td><code>RiteDefinition</code></td>
+<td>Named entries</td>
+</tr>
+<tr>
+<td><code>Current</code></td>
+<td><code>RiteDefinition</code></td>
+<td><code>Get(HarvestState.Data.riteType)</code></td>
+</tr>
+<tr>
+<td><code>Get(string id)</code></td>
+<td><code>RiteDefinition</code></td>
+<td>Falls back to <code>Smite</code></td>
+</tr>
+<tr>
+<td><code>Next()</code></td>
+<td><code>RiteDefinition</code></td>
+<td>Wraps the array</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ritedefinition">RiteDefinition<a class="headerlink" href="#ritedefinition" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code> / <code>Name</code> / <code>Description</code></td>
+<td><code>string</code></td>
+<td>Identity and menu copy</td>
+</tr>
+<tr>
+<td><code>Cooldown</code></td>
+<td><code>float</code></td>
+<td>Seconds, scaled by <code>HarvestState.RiteCooldownMultiplier</code></td>
+</tr>
+<tr>
+<td><code>Damage</code></td>
+<td><code>int</code></td>
+<td>Base damage, scaled by <code>RiteDamageMultiplier</code></td>
+</tr>
+<tr>
+<td><code>Radius</code></td>
+<td><code>float</code></td>
+<td>Effect radius around the player</td>
+</tr>
+<tr>
+<td><code>Knockback</code></td>
+<td><code>float</code></td>
+<td>Impulse applied to targets</td>
+</tr>
+<tr>
+<td><code>SlowFactor</code> / <code>SlowDuration</code></td>
+<td><code>float</code></td>
+<td>Optional slow</td>
+</tr>
+<tr>
+<td><code>HealPerHit</code></td>
+<td><code>int</code></td>
+<td>Health restored per target hit</td>
+</tr>
+<tr>
+<td><code>Color</code></td>
+<td><code>Color</code></td>
+<td>VFX colour</td>
+</tr>
+</tbody>
+</table>
+<h3 id="heirloomcatalog">HeirloomCatalog<a class="headerlink" href="#heirloomcatalog" title="Permanent link">&para;</a></h3>
+<p><code>Combat/RelicCatalog.cs</code> — eighteen permanent passives. Every owned heirloom
+applies at once, so the whole list in <code>Data.heirlooms</code> matters.</p>
+<p><strong>Entries</strong></p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>heart</code></td>
+<td>Ember Heart</td>
+<td>+20 maximum health</td>
+</tr>
+<tr>
+<td><code>fang</code></td>
+<td>Thorn Fang</td>
+<td>+5 melee damage</td>
+</tr>
+<tr>
+<td><code>feather</code></td>
+<td>Zephyr Plume</td>
+<td>+12% movement speed</td>
+</tr>
+<tr>
+<td><code>ward</code></td>
+<td>Warding Opal</td>
+<td>take 15% less damage</td>
+</tr>
+<tr>
+<td><code>chalice</code></td>
+<td>Cup of Stars</td>
+<td>+10% grace from ceremonies</td>
+</tr>
+<tr>
+<td><code>ledger</code></td>
+<td>Gilded Ledger</td>
+<td>+1 pearl per kill</td>
+</tr>
+<tr>
+<td><code>harvest</code></td>
+<td>Orchard Charm</td>
+<td>+1 food per farm harvest</td>
+</tr>
+<tr>
+<td><code>mirror</code></td>
+<td>Obsidian Mirror</td>
+<td>+25% rite damage</td>
+</tr>
+<tr>
+<td><code>bell</code></td>
+<td>Mourning Bell</td>
+<td>rites recharge 10% faster</td>
+</tr>
+<tr>
+<td><code>crown</code></td>
+<td>Sovereign's Diadem</td>
+<td>+15% devotion from pilgrimages</td>
+</tr>
+<tr>
+<td><code>mask</code></td>
+<td>Shrouded Mask</td>
+<td>+5% critical chance</td>
+</tr>
+<tr>
+<td><code>hourglass</code></td>
+<td>Amber Hourglass</td>
+<td>attacks 10% faster</td>
+</tr>
+<tr>
+<td><code>lantern</code></td>
+<td>Pale Lantern</td>
+<td>+2 bomb capacity</td>
+</tr>
+<tr>
+<td><code>candle</code></td>
+<td>Vigil Candle</td>
+<td>+10 maximum health</td>
+</tr>
+<tr>
+<td><code>idol</code></td>
+<td>Cracked Idol</td>
+<td>+10% grace</td>
+</tr>
+<tr>
+<td><code>cloak</code></td>
+<td>Shroud Cloak</td>
+<td>take 5% less damage</td>
+</tr>
+<tr>
+<td><code>tome</code></td>
+<td>Starledger</td>
+<td>+10% rite damage</td>
+</tr>
+<tr>
+<td><code>ring</code></td>
+<td>Sunring</td>
+<td>+5% movement speed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Members</strong></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>All</code></td>
+<td><code>HeirloomDefinition[]</code></td>
+<td>All eighteen</td>
+</tr>
+<tr>
+<td><code>Get(string id)</code></td>
+<td><code>HeirloomDefinition</code></td>
+<td><code>null</code> when unknown</td>
+</tr>
+<tr>
+<td><code>NameOf</code> / <code>DescriptionOf(string id)</code></td>
+<td><code>string</code></td>
+<td>Display helpers with fallbacks</td>
+</tr>
+<tr>
+<td><code>ColorOf(string id)</code></td>
+<td><code>Color</code></td>
+<td><code>Color.white</code> when unknown</td>
+</tr>
+<tr>
+<td><code>RandomUnowned()</code></td>
+<td><code>HeirloomDefinition</code></td>
+<td>Random not in <code>Data.heirlooms</code>, or <code>null</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title"><code>crown</code> is read outside the catalog</p>
+<p><code>WardenDefeated</code> multiplies the act reward by <code>1.15</code> when
+<code>HarvestState.HasHeirloom("crown")</code>; the rest are read inside
+<code>HarvestState</code>'s derived properties.</p>
+</div>
+<h3 id="heirloomdefinition">HeirloomDefinition<a class="headerlink" href="#heirloomdefinition" title="Permanent link">&para;</a></h3>
+<p>Plain data: every bonus it grants is read from its id inside <code>HarvestState</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code> / <code>Name</code> / <code>Description</code></td>
+<td><code>string</code></td>
+<td>Save id, display name, menu copy</td>
+</tr>
+<tr>
+<td><code>Color</code></td>
+<td><code>Color</code></td>
+<td>Menu accent colour</td>
+</tr>
+</tbody>
+</table>
+<h3 id="attirecatalog">AttireCatalog<a class="headerlink" href="#attirecatalog" title="Permanent link">&para;</a></h3>
+<p><code>Combat/GearCatalog.cs</code> — eleven pieces across two slots. All owned pieces stay
+in <code>Data.attire</code>; one per slot is equipped.</p>
+<p><strong>Entries</strong></p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Slot</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>wool</code></td>
+<td>Rose Mantle</td>
+<td>Armor</td>
+<td>+12 maximum health</td>
+</tr>
+<tr>
+<td><code>scale</code></td>
+<td>Sun Scale</td>
+<td>Armor</td>
+<td>take 10% less damage</td>
+</tr>
+<tr>
+<td><code>briar</code></td>
+<td>Thorn Mail</td>
+<td>Armor</td>
+<td>attackers take 4 damage</td>
+</tr>
+<tr>
+<td><code>pearl</code></td>
+<td>Pearl Plate</td>
+<td>Armor</td>
+<td>+15 maximum health</td>
+</tr>
+<tr>
+<td><code>guard</code></td>
+<td>Guardian Sigil</td>
+<td>Armor</td>
+<td>take 5% less damage</td>
+</tr>
+<tr>
+<td><code>moon</code></td>
+<td>Silver Mantle</td>
+<td>Armor</td>
+<td>rites recharge 10% faster</td>
+</tr>
+<tr>
+<td><code>ember</code></td>
+<td>Cinder Charm</td>
+<td>Charm</td>
+<td>+12% weapon damage</td>
+</tr>
+<tr>
+<td><code>tide</code></td>
+<td>Tideglass Charm</td>
+<td>Charm</td>
+<td>rites recharge 20% faster</td>
+</tr>
+<tr>
+<td><code>wolf</code></td>
+<td>Fang Charm</td>
+<td>Charm</td>
+<td>attacks 8% faster</td>
+</tr>
+<tr>
+<td><code>owl</code></td>
+<td>Owl Pinion</td>
+<td>Charm</td>
+<td>+5% critical chance</td>
+</tr>
+<tr>
+<td><code>serpent</code></td>
+<td>Serpent Coil</td>
+<td>Charm</td>
+<td>melee hits heal 1 health</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Members</strong></p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>All</code></td>
+<td><code>AttireDefinition[]</code></td>
+<td>All eleven</td>
+</tr>
+<tr>
+<td><code>Get(string id)</code></td>
+<td><code>AttireDefinition</code></td>
+<td><code>null</code> when unknown</td>
+</tr>
+<tr>
+<td><code>RandomUnowned()</code></td>
+<td><code>AttireDefinition</code></td>
+<td>Random not owned, or <code>null</code></td>
+</tr>
+<tr>
+<td><code>Owned(AttireSlot slot)</code></td>
+<td><code>List&lt;AttireDefinition&gt;</code></td>
+<td>Owned entries of one slot</td>
+</tr>
+<tr>
+<td><code>NameOf</code> / <code>DescriptionOf(string id)</code></td>
+<td><code>string</code></td>
+<td>Display helpers</td>
+</tr>
+</tbody>
+</table>
+<p>Equipping goes through state, not the catalog: <code>HarvestState.AddAttire("moon")</code>
+returns <code>false</code> if the id is unknown or already owned, and <code>EquipAttire</code> routes
+the piece to <code>armorId</code> or <code>charmId</code> by its slot.</p>
+<h3 id="attireslot">AttireSlot<a class="headerlink" href="#attireslot" title="Permanent link">&para;</a></h3>
+<p><code>enum AttireSlot { Armor, Charm }</code> — two slots; <code>EnsureLoadout</code> keeps one valid
+owned item in each.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Save field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Armor</code></td>
+<td><code>armorId</code></td>
+<td>Body slot, defaults to <code>wool</code></td>
+</tr>
+<tr>
+<td><code>Charm</code></td>
+<td><code>charmId</code></td>
+<td>Trinket slot, defaults to <code>ember</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="attiredefinition">AttireDefinition<a class="headerlink" href="#attiredefinition" title="Permanent link">&para;</a></h3>
+<p>One owned piece: the id drives the effect inside <code>HarvestState</code>, the slot decides
+which save field it occupies.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code> / <code>Name</code> / <code>Description</code></td>
+<td><code>string</code></td>
+<td>Save id, display name, menu copy</td>
+</tr>
+<tr>
+<td><code>Slot</code></td>
+<td><code>AttireSlot</code></td>
+<td>Which save field it equips into</td>
+</tr>
+<tr>
+<td><code>Color</code></td>
+<td><code>Color</code></td>
+<td>Menu accent colour</td>
+</tr>
+</tbody>
+</table>
+<h3 id="companioncatalog">CompanionCatalog<a class="headerlink" href="#companioncatalog" title="Permanent link">&para;</a></h3>
+<p><code>Followers/FollowerCatalog.cs</code> — names, traits and tints. The first eight names
+are the "inner circle", handed out before the wider pool because they own
+portrait art.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>InnerCircleCount</code></td>
+<td><code>const int</code></td>
+<td><code>8</code></td>
+</tr>
+<tr>
+<td><code>InnerCircleName(int index)</code></td>
+<td><code>string</code></td>
+<td>Name at <code>index</code>, or <code>null</code> out of range</td>
+</tr>
+<tr>
+<td><code>Traits</code></td>
+<td><code>CompanionTrait[]</code></td>
+<td>The six traits</td>
+</tr>
+<tr>
+<td><code>RandomName()</code></td>
+<td><code>string</code></td>
+<td>Uniform pick from the 30-name pool</td>
+</tr>
+<tr>
+<td><code>RandomTrait()</code></td>
+<td><code>CompanionTrait</code></td>
+<td>Uniform pick from <code>Traits</code></td>
+</tr>
+<tr>
+<td><code>TraitName(CompanionTrait)</code></td>
+<td><code>string</code></td>
+<td>Localised <code>trait.&lt;name&gt;</code></td>
+</tr>
+<tr>
+<td><code>TraitDescription(CompanionTrait)</code></td>
+<td><code>string</code></td>
+<td>Localised <code>trait.&lt;name&gt;.desc</code></td>
+</tr>
+<tr>
+<td><code>Parse(string id)</code></td>
+<td><code>CompanionTrait</code></td>
+<td>Name match, otherwise <code>Loyal</code></td>
+</tr>
+<tr>
+<td><code>RandomTint()</code></td>
+<td><code>Color</code></td>
+<td>Lerp between rose/gold and teal</td>
+</tr>
+</tbody>
+</table>
+<p>The 30-name pool, in order: Amara, Sable, Iris, Nadia, Yara, Liora, Mira, Yafit,
+Calista, Delphine, Esme, Faye, Gemma, Helia, Isolde, Jade, Kira, Lyra, Maeve,
+Nerissa, Opal, Perla, Quinn, Rhea, Seraphine, Talia, Uma, Vesper, Wren, Yvonne.
+Only those eight are treated as named (white tint) in the hub; <code>Amara</code> has no
+portrait file and falls back to the shared <code>companion</code> sprite, everyone else is
+tinted.</p>
+<h3 id="companiontrait">CompanionTrait<a class="headerlink" href="#companiontrait" title="Permanent link">&para;</a></h3>
+<p><code>enum CompanionTrait { Loyal, Hardworking, Glutton, Devout, Sickly, Lazy }</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Trait</th>
+<th>Description fallback</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Loyal</code></td>
+<td>loyalty fades slowly</td>
+</tr>
+<tr>
+<td><code>Hardworking</code></td>
+<td>steadier worker, +2 output</td>
+</tr>
+<tr>
+<td><code>Glutton</code></td>
+<td>hungers quickly</td>
+</tr>
+<tr>
+<td><code>Devout</code></td>
+<td>+2 grace at hymns</td>
+</tr>
+<tr>
+<td><code>Sickly</code></td>
+<td>falls ill easily</td>
+</tr>
+<tr>
+<td><code>Lazy</code></td>
+<td>works slowly, tires quickly</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sanctumtype">SanctumType<a class="headerlink" href="#sanctumtype" title="Permanent link">&para;</a></h3>
+<p><code>Buildings/Building.cs</code> — twenty structures. Costs are static <code>Sanctum</code> methods;
+production intervals are private constants on the same class.</p>
+<table>
+<thead>
+<tr>
+<th><code>SanctumType</code></th>
+<th>Wood</th>
+<th>Stone</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Farm</code></td>
+<td>20</td>
+<td>0</td>
+<td>+2 food every 12 s</td>
+</tr>
+<tr>
+<td><code>Shrine</code></td>
+<td>0</td>
+<td>25</td>
+<td>+1 grace every 8 s, scaled by dirt</td>
+</tr>
+<tr>
+<td><code>Bed</code></td>
+<td>15</td>
+<td>0</td>
+<td>+1 companion and a bed slot</td>
+</tr>
+<tr>
+<td><code>Lumberyard</code></td>
+<td>30</td>
+<td>0</td>
+<td>+1 wood every 10 s</td>
+</tr>
+<tr>
+<td><code>Quarry</code></td>
+<td>20</td>
+<td>20</td>
+<td>+1 stone every 12 s</td>
+</tr>
+<tr>
+<td><code>Kitchen</code></td>
+<td>25</td>
+<td>10</td>
+<td>worker turns 2 food into 1 meal every 16 s</td>
+</tr>
+<tr>
+<td><code>Storage</code></td>
+<td>30</td>
+<td>10</td>
+<td>+100 wood/stone and +50 food caps per level</td>
+</tr>
+<tr>
+<td><code>HerbGarden</code></td>
+<td>20</td>
+<td>0</td>
+<td>+1 herb every 14 s</td>
+</tr>
+<tr>
+<td><code>Apothecary</code></td>
+<td>30</td>
+<td>20</td>
+<td>worker turns 2 herbs into 1 medicine every 18 s</td>
+</tr>
+<tr>
+<td><code>TeaHouse</code></td>
+<td>30</td>
+<td>10</td>
+<td>social aura radius 5.2</td>
+</tr>
+<tr>
+<td><code>Memorial</code></td>
+<td>25</td>
+<td>10</td>
+<td>memorials and mourning, aura 3.2</td>
+</tr>
+<tr>
+<td><code>Reflection</code></td>
+<td>40</td>
+<td>20</td>
+<td>holds dissenters until loyalty returns</td>
+</tr>
+<tr>
+<td><code>SunBath</code></td>
+<td>25</td>
+<td>15</td>
+<td>rest and loyalty recovery, aura 4.5</td>
+</tr>
+<tr>
+<td><code>Obelisk</code></td>
+<td>15</td>
+<td>30</td>
+<td>+1 grace every 12 s, aura 5.5</td>
+</tr>
+<tr>
+<td><code>Temple</code></td>
+<td>50</td>
+<td>30</td>
+<td>+2 grace every 12 s, aura 6</td>
+</tr>
+<tr>
+<td><code>Sawmill</code></td>
+<td>35</td>
+<td>10</td>
+<td>+2 wood every 9 s</td>
+</tr>
+<tr>
+<td><code>Stoneworks</code></td>
+<td>30</td>
+<td>20</td>
+<td>+2 stone every 10 s</td>
+</tr>
+<tr>
+<td><code>WheatField</code></td>
+<td>25</td>
+<td>5</td>
+<td>+2 food every 10 s</td>
+</tr>
+<tr>
+<td><code>BellTower</code></td>
+<td>40</td>
+<td>35</td>
+<td>+1 grace every 15 s, aura 7</td>
+</tr>
+<tr>
+<td><code>Reliquary</code></td>
+<td>30</td>
+<td>25</td>
+<td>+1 pearl every 18 s, aura 3.5</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CostWood(SanctumType)</code></td>
+<td><code>int</code></td>
+<td>Build cost, <code>0</code> for <code>Shrine</code></td>
+</tr>
+<tr>
+<td><code>CostStone(SanctumType)</code></td>
+<td><code>int</code></td>
+<td>Build cost</td>
+</tr>
+<tr>
+<td><code>UpgradeCostWood(SanctumType)</code></td>
+<td><code>int</code></td>
+<td><code>round(0.6 × wood) + 10</code></td>
+</tr>
+<tr>
+<td><code>UpgradeCostStone(SanctumType)</code></td>
+<td><code>int</code></td>
+<td><code>round(0.6 × stone) + 8</code></td>
+</tr>
+</tbody>
+</table>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">wood</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sanctum</span><span class="p">.</span><span class="n">CostWood</span><span class="p">(</span><span class="n">SanctumType</span><span class="p">.</span><span class="n">Temple</span><span class="p">);</span><span class="w">        </span><span class="c1">// 50</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sanctum</span><span class="p">.</span><span class="n">UpgradeCostWood</span><span class="p">(</span><span class="n">SanctumType</span><span class="p">.</span><span class="n">Temple</span><span class="p">);</span><span class="w"> </span><span class="c1">// 40</span>
+</span></code></pre></div>
+<p>Production is <code>(base + workerBonus + levelBonus) × conditionScale</code>, where the
+worker bonus is <code>CompanionAgent.WorkBonus</code> (2 for <code>Hardworking</code>, else 1, plus
+<code>(level - 1) / 2</code>, plus 1 during a meal buff) and <code>conditionScale</code> is
+<code>Lerp(0.55, 1, Condition / 100)</code>. Storage levels feed <code>HarvestState.StorageLevels</code>,
+raising every cap.</p>
+<h3 id="omendeck">OmenDeck<a class="headerlink" href="#omendeck" title="Permanent link">&para;</a></h3>
+<p>The 18-card omen deck is <strong>private</strong>: <code>static readonly (string id, string name,
+string desc)[] OmenDeck</code> inside <code>HarvestGame</code>. It is not accessible from other
+classes; grant cards with <code>HarvestGame.GrantOmen(id, name)</code>, offer them with
+<code>ShowOmenMenu</code>, and browse them through <code>ShowCatalogSection(1)</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sun</code></td>
+<td>Dawnfire</td>
+<td>+15 maximum health</td>
+</tr>
+<tr>
+<td><code>moon</code></td>
+<td>Shrouded Tides</td>
+<td>+15% grace from ceremonies</td>
+</tr>
+<tr>
+<td><code>star</code></td>
+<td>Lodestar</td>
+<td>+5 melee damage</td>
+</tr>
+<tr>
+<td><code>tower</code></td>
+<td>Shattered Spire</td>
+<td>+1 pearl per slain husk</td>
+</tr>
+<tr>
+<td><code>wheel</code></td>
+<td>Turning Garden</td>
+<td>+1 food per rose garden harvest</td>
+</tr>
+<tr>
+<td><code>death</code></td>
+<td>Last Petal</td>
+<td>+10% weapon damage</td>
+</tr>
+<tr>
+<td><code>judgement</code></td>
+<td>Rite of Rebirth</td>
+<td>rites recharge 25% faster</td>
+</tr>
+<tr>
+<td><code>temperance</code></td>
+<td>Still Pool</td>
+<td>heal 8 after every cleared room</td>
+</tr>
+<tr>
+<td><code>devil</code></td>
+<td>Thorned Crown</td>
+<td>+12% critical chance and stronger crits</td>
+</tr>
+<tr>
+<td><code>hermit</code></td>
+<td>Lantern Keeper</td>
+<td>+5 potion capacity</td>
+</tr>
+<tr>
+<td><code>hanged</code></td>
+<td>Suspended Bloom</td>
+<td>+15% rite damage</td>
+</tr>
+<tr>
+<td><code>world</code></td>
+<td>Worldroot</td>
+<td>+10% grace from ceremonies</td>
+</tr>
+<tr>
+<td><code>priestess</code></td>
+<td>Harvest Oracle</td>
+<td>+10 maximum health</td>
+</tr>
+<tr>
+<td><code>emperor</code></td>
+<td>Sovereign's Seal</td>
+<td>+2 melee damage</td>
+</tr>
+<tr>
+<td><code>empress</code></td>
+<td>Harvest Empress</td>
+<td>+1 food per rose garden harvest</td>
+</tr>
+<tr>
+<td><code>chariot</code></td>
+<td>Swift Chariot</td>
+<td>+5% movement speed</td>
+</tr>
+<tr>
+<td><code>magician</code></td>
+<td>Ember Magician</td>
+<td>+2 bomb capacity</td>
+</tr>
+<tr>
+<td><code>lovers</code></td>
+<td>Twin Blossoms</td>
+<td>+5 maximum health</td>
+</tr>
+</tbody>
+</table>
+<p><code>HarvestState.OmenSummary()</code> maps every id to its display name, and <code>HasOmen(id)</code>
+is the membership test used by the bonus formulas. If every card is owned,
+<code>ShowOmenMenu</code> pays <code>+25 pearls</code> instead of offering a choice.</p>
+<div class="admonition warning">
+<p class="admonition-title">Adding a card takes three edits</p>
+<p>Add the tuple to <code>OmenDeck</code>, add the id to <code>OmenSummary</code>'s switch (otherwise
+the HUD prints the raw id), and add the effect to the relevant derived
+property in <code>GameState.cs</code>. A card with no formula is a dead card.</p>
+</div>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../core/">Core API reference</a></li>
+<li><a href="../../architecture/systems-map/">Systems map</a></li>
+<li><a href="../../customization/balancing/">Balancing &amp; tuning</a></li>
+<li><a href="../../customization/adding-content/">Adding content</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../core/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Core API">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Core API
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../dungeon/" class="md-footer__link md-footer__link--next" aria-label="Next: Dungeon API">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Dungeon API
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Chosen of the Harvest template documentation. All rights reserved.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/camenduru/ChosenOfTheHarvestDoc" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://assetstore.unity.com/templates" target="_blank" rel="noopener" title="assetstore.unity.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M30.7 72.3C37.6 48.4 59.5 32 84.4 32h344c24.9 0 46.8 16.4 53.8 40.3l23.4 80.2c12.8 43.7-20.1 87.5-65.6 87.5-26.3 0-49.4-14.9-60.8-37.1-11.6 21.9-34.6 37.1-61.4 37.1-26.6 0-49.7-15-61.3-37-11.6 22-34.7 37-61.3 37-26.8 0-49.8-15.1-61.4-37.1C122.4 225 99.3 240 73 240c-45.6 0-78.4-43.7-65.6-87.5zM96.4 352h320v-66.4c7.6 1.6 15.5 2.4 23.5 2.4 14.3 0 28-2.6 40.5-7.2V432c0 26.5-21.5 48-48 48h-352c-26.5 0-48-21.5-48-48V280.8c12.5 4.6 26.1 7.2 40.5 7.2 8.1 0 15.9-.8 23.5-2.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

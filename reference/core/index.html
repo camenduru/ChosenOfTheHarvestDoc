@@ -1,0 +1,3702 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official documentation for the Chosen of the Harvest Unity template — a complete code-driven action-roguelike and sanctuary-management framework you can reskin and ship.">
+      
+      
+        <meta name="author" content="camenduru">
+      
+      
+        <link rel="canonical" href="https://camenduru.github.io/ChosenOfTheHarvestDoc/reference/core/">
+      
+      
+        <link rel="prev" href="../../architecture/systems-map/">
+      
+      
+        <link rel="next" href="../catalogs/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Core API - Chosen of the Harvest — Unity Template Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#core-api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Chosen of the Harvest — Unity Template Docs" class="md-header__button md-logo" aria-label="Chosen of the Harvest — Unity Template Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Chosen of the Harvest — Unity Template Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Core API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/camenduru/ChosenOfTheHarvestDoc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    camenduru/ChosenOfTheHarvestDoc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/hub-and-companions/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../customization/rebranding/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Customization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../architecture/overview/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../publishing/building/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Publishing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../faq/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Help
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Chosen of the Harvest — Unity Template Docs" class="md-nav__button md-logo" aria-label="Chosen of the Harvest — Unity Template Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Chosen of the Harvest — Unity Template Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/camenduru/ChosenOfTheHarvestDoc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    camenduru/ChosenOfTheHarvestDoc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-run/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your First Run
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/project-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/controls/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/hub-and-companions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Harvesthold Hub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/expeditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expeditions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/combat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Combat & Wardens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/building/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building & Sanctums
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/economy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Economy & Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/ceremonies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ceremonies & Omens
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/quests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Campaign & Quests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/save-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Saving & Loading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/localization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Localization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/hud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HUD Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/rebranding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rebranding the Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/art/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Replacing Art
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Replacing Audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balancing & Tuning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/adding-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding Content
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customization/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input & Rebinding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/bootstrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootstrap & Game Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/state-and-save/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    State & Save Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/systems-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#harvestgame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HarvestGame
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harveststate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HarvestState
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harvestsavedata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HarvestSaveData
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preferences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bindings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lexicon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lexicon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sounddirector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SoundDirector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harvestsavesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HarvestSaveSystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sagasystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SagaSystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seasoncycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SeasonCycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage3D
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../catalogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalogs API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dungeon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dungeon API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../followers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Followers API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../localization-keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Localization Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Publishing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publishing/building/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Players
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publishing/asset-store/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asset Store Submission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License & Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#harvestgame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HarvestGame
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harveststate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HarvestState
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harvestsavedata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HarvestSaveData
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preferences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bindings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lexicon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lexicon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sounddirector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SoundDirector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harvestsavesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HarvestSaveSystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sagasystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SagaSystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seasoncycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SeasonCycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stage3D
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="core-api-reference">Core API reference<a class="headerlink" href="#core-api-reference" title="Permanent link">&para;</a></h1>
+<p>This page is the API surface of the <code>ChosenOfTheHarvest</code> core namespace: the
+bootstrap, the state facade and save types, settings, input, text, audio, quests,
+the day cycle and the 3D staging helpers. Signatures and defaults are taken from
+the source; internal and private members are omitted, and "default" means the
+value assigned in source.</p>
+<h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
+<h3 id="harvestgame">HarvestGame<a class="headerlink" href="#harvestgame" title="Permanent link">&para;</a></h3>
+<p><code>Core/GameBootstrap.cs</code> — the single entry point. Builds the world in <code>Awake</code>,
+dispatches input in <code>Update</code>, owns every menu. Access it through
+<code>HarvestGame.Instance</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Version</code></td>
+<td><code>const string</code></td>
+<td><code>"1.0.0"</code>; shown in the pause title</td>
+</tr>
+<tr>
+<td><code>Instance</code></td>
+<td><code>static HarvestGame</code></td>
+<td>Set at the top of <code>Awake</code></td>
+</tr>
+<tr>
+<td><code>InputLocked</code></td>
+<td><code>static bool</code></td>
+<td>Global gate read by player, companions, sanctums, day cycle</td>
+</tr>
+<tr>
+<td><code>CeremonyType</code></td>
+<td>nested <code>enum</code></td>
+<td><code>Hymn = 0</code>, <code>Feast = 1</code>, <code>Sacrifice = 2</code>, <code>Plenty = 3</code>, <code>Warding = 4</code></td>
+</tr>
+<tr>
+<td><code>Cam</code></td>
+<td><code>Camera</code></td>
+<td>Generated perspective camera (45° pitch, FOV 60)</td>
+</tr>
+<tr>
+<td><code>HarvestAltarRef</code></td>
+<td><code>HarvestAltar</code></td>
+<td>The hub altar</td>
+</tr>
+<tr>
+<td><code>Player</code></td>
+<td><code>PlayerController</code></td>
+<td>The Sovereign</td>
+</tr>
+<tr>
+<td><code>ExpeditionRef</code></td>
+<td><code>Expedition</code></td>
+<td>Dungeon component, inactive in the hub</td>
+</tr>
+<tr>
+<td><code>HarvestHudRef</code></td>
+<td><code>HarvestHud</code></td>
+<td>Generated HUD</td>
+</tr>
+<tr>
+<td><code>Audio</code></td>
+<td><code>SoundDirector</code></td>
+<td>Generated audio director</td>
+</tr>
+<tr>
+<td><code>StatusLine</code></td>
+<td><code>string</code></td>
+<td>Rewritten by <code>UpdateStatus</code> every frame</td>
+</tr>
+<tr>
+<td><code>InExpedition</code> / <code>InInterior</code></td>
+<td><code>bool</code></td>
+<td>Mode queries</td>
+</tr>
+<tr>
+<td><code>IsNight</code> / <code>IsDusk</code></td>
+<td><code>bool</code></td>
+<td>Delegated to <code>SeasonCycle</code> (dusk is phase 2)</td>
+</tr>
+<tr>
+<td><code>Companions</code></td>
+<td><code>IReadOnlyList&lt;CompanionAgent&gt;</code></td>
+<td>Live agents, index-aligned with records</td>
+</tr>
+<tr>
+<td><code>Sanctums</code></td>
+<td><code>IReadOnlyList&lt;Sanctum&gt;</code></td>
+<td>Placed buildings, index-aligned with <code>Data.buildings</code></td>
+</tr>
+<tr>
+<td><code>HasTeaHouse</code></td>
+<td><code>bool</code></td>
+<td>Any <code>SanctumType.TeaHouse</code> exists</td>
+</tr>
+<tr>
+<td><code>FoodSpot</code> / <code>HaulSpot</code></td>
+<td><code>Vector3</code></td>
+<td>First kitchen / storage offset, else the altar</td>
+</tr>
+<tr>
+<td><code>FeastCost</code></td>
+<td><code>int</code></td>
+<td><code>4</code> with a kitchen, otherwise <code>8</code></td>
+</tr>
+<tr>
+<td><code>IsPlacing</code> / <code>PhotoModeActive</code></td>
+<td><code>bool</code></td>
+<td>Placement ghost / photo mode</td>
+</tr>
+<tr>
+<td><code>CampaignStage</code></td>
+<td><code>int</code></td>
+<td><code>Data.campaignStage</code> clamped 0–3</td>
+</tr>
+<tr>
+<td><code>AverageHunger</code></td>
+<td><code>float</code></td>
+<td>Mean hunger, <code>100</code> when there are no companions</td>
+</tr>
+<tr>
+<td><code>SpawnCompanion(int index)</code></td>
+<td><code>void</code></td>
+<td>Builds the agent for an existing record</td>
+</tr>
+<tr>
+<td><code>RecruitCompanion()</code></td>
+<td><code>bool</code></td>
+<td>Adds a record + agent; false at 30 companions</td>
+</tr>
+<tr>
+<td><code>CompanionDied(CompanionAgent, string cause = "starved to death")</code></td>
+<td><code>void</code></td>
+<td>Records a memorial, removes the agent, opens the menu</td>
+</tr>
+<tr>
+<td><code>UsePotion()</code></td>
+<td><code>void</code></td>
+<td>Consumes one potion to heal</td>
+</tr>
+<tr>
+<td><code>ConsumeFoodFor(CompanionAgent)</code></td>
+<td><code>bool</code></td>
+<td>Pays food/meals for one companion</td>
+</tr>
+<tr>
+<td><code>DepositHaul(CompanionAgent, SanctumType, int amount)</code></td>
+<td><code>void</code></td>
+<td>Credits a hauled load at the storage/altar spot</td>
+</tr>
+<tr>
+<td><code>Interact()</code></td>
+<td><code>void</code></td>
+<td>Context action for hub, interior or dungeon</td>
+</tr>
+<tr>
+<td><code>EnterExpedition()</code></td>
+<td><code>void</code></td>
+<td>Starts the current act, clamped 0–2</td>
+</tr>
+<tr>
+<td><code>EnterExpedition(int act)</code></td>
+<td><code>void</code></td>
+<td>Rolls a curse, disables the hub, calls <code>Expedition.Begin</code></td>
+</tr>
+<tr>
+<td><code>ExitExpedition(bool loot)</code></td>
+<td><code>void</code></td>
+<td>Ends the run, restores the hub, autosaves when <code>loot</code></td>
+</tr>
+<tr>
+<td><code>WardenDefeated(int act, string bossName)</code></td>
+<td><code>void</code></td>
+<td>Advances <code>campaignStage</code>, pays devotion, evaluates the saga</td>
+</tr>
+<tr>
+<td><code>ShowTitleScreen()</code> / <code>OpenPauseMenu()</code></td>
+<td><code>void</code></td>
+<td>Title and pause menus (both pause and lock input)</td>
+</tr>
+<tr>
+<td><code>LoadGame()</code></td>
+<td><code>void</code></td>
+<td>Loads the active slot and rebuilds the hub from it</td>
+</tr>
+<tr>
+<td><code>Build(SanctumType)</code></td>
+<td><code>Sanctum</code></td>
+<td>Legacy instant build in a free row slot; pays wood/stone</td>
+</tr>
+<tr>
+<td><code>BeginPlacement(SanctumType)</code> / <code>BeginMove(Sanctum)</code> / <code>CancelPlacement()</code></td>
+<td><code>void</code></td>
+<td>Ghost placement lifecycle</td>
+</tr>
+<tr>
+<td><code>SetPlacementCursor(Vector3)</code></td>
+<td><code>void</code></td>
+<td>Moves the ghost, callable by UI or tests</td>
+</tr>
+<tr>
+<td><code>ConfirmPlacement()</code> / <code>PlaceAt(SanctumType, Vector3)</code></td>
+<td><code>bool</code></td>
+<td>Commits the ghost / places directly (<code>ProofTest</code> uses <code>PlaceAt</code>)</td>
+</tr>
+<tr>
+<td><code>RepairSanctum</code> / <code>UpgradeSanctum</code> / <code>RemoveSanctum(Sanctum)</code></td>
+<td><code>bool</code></td>
+<td>Condition, level (max 3), demolition with half refund</td>
+</tr>
+<tr>
+<td><code>EnterInterior(Sanctum)</code> / <code>ExitInterior()</code></td>
+<td><code>void</code></td>
+<td>Builds/destroys the interior root</td>
+</tr>
+<tr>
+<td><code>ShowInteriorBuildMenu()</code></td>
+<td><code>void</code></td>
+<td>Interior piece menu</td>
+</tr>
+<tr>
+<td><code>PlaceInteriorPiece(string type)</code></td>
+<td><code>bool</code></td>
+<td>Places a wall/decor piece on the interior grid</td>
+</tr>
+<tr>
+<td><code>ResolveInteriorPosition(Vector3, float radius)</code></td>
+<td><code>Vector3</code></td>
+<td>Collision resolve used by <code>PlayerController</code></td>
+</tr>
+<tr>
+<td><code>ShowCeremonyMenu()</code> / <code>StartCeremony(CeremonyType)</code></td>
+<td><code>void</code></td>
+<td>Altar menu and ceremony coroutine</td>
+</tr>
+<tr>
+<td><code>SharpenBlade()</code></td>
+<td><code>void</code></td>
+<td>15 pearls for <code>weaponLevel++</code></td>
+</tr>
+<tr>
+<td><code>ShowCompanionRoster(int page = 0)</code></td>
+<td><code>void</code></td>
+<td>Roster and per-companion actions</td>
+</tr>
+<tr>
+<td><code>ShowCampaignMap()</code></td>
+<td><code>void</code></td>
+<td>Act map; entering the portal opens this</td>
+</tr>
+<tr>
+<td><code>ShowQuestLog()</code> / <code>ShowInventory()</code></td>
+<td><code>void</code></td>
+<td>Saga progress and item list</td>
+</tr>
+<tr>
+<td><code>ShowAttireMenu(int page = 0)</code></td>
+<td><code>void</code></td>
+<td>Equip owned armour/charms</td>
+</tr>
+<tr>
+<td><code>ShowOmenMenu(Action onDone)</code></td>
+<td><code>void</code></td>
+<td>Offers up to two unowned omens; always calls <code>onDone</code></td>
+</tr>
+<tr>
+<td><code>GrantOmen(string id, string name)</code></td>
+<td><code>void</code></td>
+<td>Adds an omen id, toasts, special-cases <code>sun</code></td>
+</tr>
+<tr>
+<td><code>ShowCatalogMenu()</code></td>
+<td><code>void</code></td>
+<td>Read-only content browser</td>
+</tr>
+<tr>
+<td><code>ShowCatalogSection(int section, int page = 0)</code></td>
+<td><code>void</code></td>
+<td>0 weapons, 1 omens, 2 heirlooms, 3 equipment, 4 buildings, 5 enemies</td>
+</tr>
+<tr>
+<td><code>CatalogSummary()</code></td>
+<td><code>string</code></td>
+<td>One-line counts of every catalog</td>
+</tr>
+<tr>
+<td><code>CycleWeapon()</code> / <code>CycleRite()</code></td>
+<td><code>void</code></td>
+<td>Equips <code>Next()</code> and persists the id</td>
+</tr>
+<tr>
+<td><code>EnterPhotoMode()</code> / <code>ExitPhotoMode()</code></td>
+<td><code>void</code></td>
+<td>Free camera; F12 captures a PNG to <code>Photos/</code></td>
+</tr>
+<tr>
+<td><code>SetCameraDistance(float)</code></td>
+<td><code>void</code></td>
+<td>Follow-distance target, minimum 6</td>
+</tr>
+<tr>
+<td><code>Shake(float strength, float duration)</code></td>
+<td><code>void</code></td>
+<td>No-op when screen shake is off or reduced motion is on</td>
+</tr>
+<tr>
+<td><code>HitStop(float duration)</code> / <code>HitFeedback(Vector3, float)</code></td>
+<td><code>void</code></td>
+<td>Brief time freeze; feedback is shake + 35 ms stop</td>
+</tr>
+<tr>
+<td><code>FlashTransition()</code></td>
+<td><code>void</code></td>
+<td>HUD fade</td>
+</tr>
+<tr>
+<td><code>Toast(string)</code></td>
+<td><code>void</code></td>
+<td>Forwards to <code>HarvestHud.Toast</code></td>
+</tr>
+<tr>
+<td><code>FloatingText(Vector3, string, Color)</code></td>
+<td><code>void</code></td>
+<td><code>TextMesh</code> that self-destructs after 1.2 s</td>
+</tr>
+<tr>
+<td><code>ToggleMute()</code></td>
+<td><code>void</code></td>
+<td>Toggles audio and toasts the new state</td>
+</tr>
+</tbody>
+</table>
+<h3 id="harveststate">HarvestState<a class="headerlink" href="#harveststate" title="Permanent link">&para;</a></h3>
+<p><code>Core/GameState.cs</code> — static facade over the save object. Every bonus and cap
+lives here.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Data</code></td>
+<td><code>HarvestSaveData</code></td>
+<td>The live save; replaced by <code>Reset</code> and by load</td>
+</tr>
+<tr>
+<td><code>CurrentCurse</code> / <code>RunHealthPenalty</code></td>
+<td><code>Curse</code> / <code>int</code></td>
+<td><em>Runtime-only</em> curse and its 25-health penalty</td>
+</tr>
+<tr>
+<td><code>Changed</code></td>
+<td><code>event Action</code></td>
+<td>Raised at the end of <code>NotifyChanged</code></td>
+</tr>
+<tr>
+<td><code>StorageLevels</code></td>
+<td><code>int</code></td>
+<td>Sum of <code>max(1, level)</code> over storage buildings</td>
+</tr>
+<tr>
+<td><code>WoodCap</code> / <code>StoneCap</code></td>
+<td><code>int</code></td>
+<td><code>250 + 100 × StorageLevels</code></td>
+</tr>
+<tr>
+<td><code>FoodCap</code></td>
+<td><code>int</code></td>
+<td><code>100 + 50 × StorageLevels</code></td>
+</tr>
+<tr>
+<td><code>HerbCap</code> / <code>MealCap</code></td>
+<td><code>int</code></td>
+<td><code>30 + 20 × StorageLevels</code></td>
+</tr>
+<tr>
+<td><code>MedicineCap</code></td>
+<td><code>int</code></td>
+<td><code>10 + 5 × StorageLevels</code></td>
+</tr>
+<tr>
+<td><code>BombCap</code></td>
+<td><code>int</code></td>
+<td><code>5 + 2 × storage + omens/heirlooms</code></td>
+</tr>
+<tr>
+<td><code>PotionCap</code></td>
+<td><code>int</code></td>
+<td><code>20</code>, <code>+5</code> with the <code>hermit</code> omen</td>
+</tr>
+<tr>
+<td><code>NotifyChanged()</code></td>
+<td><code>void</code></td>
+<td>Clamps caps, then invokes <code>Changed</code></td>
+</tr>
+<tr>
+<td><code>HasAttire(string id)</code></td>
+<td><code>bool</code></td>
+<td>Id is in <code>Data.attire</code></td>
+</tr>
+<tr>
+<td><code>EnsureLoadout()</code></td>
+<td><code>void</code></td>
+<td>Repairs invalid/missing armour, charm and rite ids</td>
+</tr>
+<tr>
+<td><code>AddAttire</code> / <code>EquipAttire(string id)</code></td>
+<td><code>bool</code></td>
+<td>Owns / equips; false when unknown or not owned</td>
+</tr>
+<tr>
+<td><code>GraceMultiplier</code></td>
+<td><code>float</code></td>
+<td>Creed × omen × heirloom grace multiplier</td>
+</tr>
+<tr>
+<td><code>GatherBonus</code></td>
+<td><code>int</code></td>
+<td><code>+1</code> with the <code>industry</code> creed</td>
+</tr>
+<tr>
+<td><code>BonusDamage</code></td>
+<td><code>int</code></td>
+<td><code>+8</code> with the <code>zeal</code> creed</td>
+</tr>
+<tr>
+<td><code>BonusPearls</code> / <code>BonusFood</code></td>
+<td><code>int</code></td>
+<td>Per-kill pearl / per-harvest food bonuses</td>
+</tr>
+<tr>
+<td><code>MaxHealth</code></td>
+<td><code>int</code></td>
+<td>Full formula, floor 40, minus <code>RunHealthPenalty</code></td>
+</tr>
+<tr>
+<td><code>WeaponDamage</code></td>
+<td><code>int</code></td>
+<td>Armament base + upgrades + bonuses, rounded</td>
+</tr>
+<tr>
+<td><code>RiteCooldownMultiplier</code> / <code>RiteDamageMultiplier</code></td>
+<td><code>float</code></td>
+<td>Product of charm/armour/omen/heirloom factors</td>
+</tr>
+<tr>
+<td><code>CriticalChance</code> / <code>CriticalMultiplier</code></td>
+<td><code>float</code></td>
+<td>Base <code>0.08</code> / <code>1.6</code> plus bonuses</td>
+</tr>
+<tr>
+<td><code>AttackCooldownMultiplier</code></td>
+<td><code>float</code></td>
+<td>Hourglass and wolf charm factors</td>
+</tr>
+<tr>
+<td><code>AttireLifesteal</code></td>
+<td><code>int</code></td>
+<td><code>1</code> with the <code>serpent</code> charm</td>
+</tr>
+<tr>
+<td><code>HasOmen(string id)</code> / <code>HasHeirloom(string id)</code></td>
+<td><code>bool</code></td>
+<td>Collection membership</td>
+</tr>
+<tr>
+<td><code>HeirloomCount</code></td>
+<td><code>int</code></td>
+<td>Owned heirlooms, 0 if null</td>
+</tr>
+<tr>
+<td><code>MoveSpeedMultiplier</code> / <code>DamageTakenMultiplier</code></td>
+<td><code>float</code></td>
+<td>Movement and incoming-damage products</td>
+</tr>
+<tr>
+<td><code>ReflectDamage</code></td>
+<td><code>int</code></td>
+<td><code>4</code> with <code>briar</code> armour</td>
+</tr>
+<tr>
+<td><code>HeirloomSummary()</code> / <code>OmenSummary()</code></td>
+<td><code>string</code></td>
+<td>Comma / dot separated display names</td>
+</tr>
+<tr>
+<td><code>CurseName</code> / <code>CreedName</code></td>
+<td><code>string</code></td>
+<td>Display strings for the HUD</td>
+</tr>
+<tr>
+<td><code>RollCurse()</code> / <code>ClearRunState()</code></td>
+<td><code>void</code></td>
+<td>Randomise the run curse / clear it</td>
+</tr>
+<tr>
+<td><code>CreedSummary()</code></td>
+<td><code>string</code></td>
+<td>Joined creed names, or the <code>creed.none</code> string</td>
+</tr>
+<tr>
+<td><code>CreateCompanionRecord()</code></td>
+<td><code>CompanionRecord</code></td>
+<td>Unique name, random trait, tint, age 18–35</td>
+</tr>
+<tr>
+<td><code>EnsureCompanionRecords()</code></td>
+<td><code>void</code></td>
+<td>Reconciles records with <code>Data.companions</code>, migrates, clamps, de-dupes names</td>
+</tr>
+<tr>
+<td><code>CompanionAt(int index)</code></td>
+<td><code>CompanionRecord</code></td>
+<td>Null-safe indexed access; ensures records first</td>
+</tr>
+<tr>
+<td><code>Reset()</code></td>
+<td><code>void</code></td>
+<td>Fresh <code>HarvestSaveData</code> + notify</td>
+</tr>
+</tbody>
+</table>
+<h3 id="harvestsavedata">HarvestSaveData<a class="headerlink" href="#harvestsavedata" title="Permanent link">&para;</a></h3>
+<p><code>Core/GameState.cs</code> — the serialised root. One row per field group; the
+field-by-field table with defaults is in
+<a href="../../architecture/state-and-save/#harvestsavedata-fields">State and save data</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>saveVersion</code></td>
+<td><code>int</code></td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td><code>day</code></td>
+<td><code>int</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>wood</code>, <code>stone</code></td>
+<td><code>int</code></td>
+<td>Bulk building materials (<code>10</code>, <code>0</code>)</td>
+</tr>
+<tr>
+<td><code>grace</code>, <code>pearls</code></td>
+<td><code>int</code></td>
+<td>Ceremony and dungeon currencies</td>
+</tr>
+<tr>
+<td><code>food</code>, <code>meals</code>, <code>herbs</code>, <code>medicine</code>, <code>potions</code>, <code>bombs</code></td>
+<td><code>int</code></td>
+<td>Consumables</td>
+</tr>
+<tr>
+<td><code>hymns</code>, <code>companions</code>, <code>health</code></td>
+<td><code>int</code></td>
+<td>Hymns performed, roster size (<code>4</code>), saved health (<code>100</code>)</td>
+</tr>
+<tr>
+<td><code>campaignStage</code>, <code>questStage</code>, <code>devotion</code>, <code>pilgrimages</code></td>
+<td><code>int</code></td>
+<td>Progression counters</td>
+</tr>
+<tr>
+<td><code>socialVersion</code></td>
+<td><code>int</code></td>
+<td><code>2</code>; relationship migration marker</td>
+</tr>
+<tr>
+<td><code>metaVitality</code>, <code>metaWrath</code>, <code>metaProvisions</code>, <code>metaCharisma</code></td>
+<td><code>int</code></td>
+<td>Meta upgrade levels</td>
+</tr>
+<tr>
+<td><code>npcIntroSeen</code>, <code>victorySeen</code></td>
+<td><code>bool</code></td>
+<td>One-shot story flags</td>
+</tr>
+<tr>
+<td><code>creedMeta</code>, <code>creedGrace</code>, <code>creedCombat</code>, <code>creedEconomy</code></td>
+<td><code>string</code></td>
+<td>Chosen creed ids</td>
+</tr>
+<tr>
+<td><code>weaponLevel</code></td>
+<td><code>int</code></td>
+<td>Sharpen count</td>
+</tr>
+<tr>
+<td><code>weaponType</code>, <code>armorId</code>, <code>charmId</code>, <code>riteType</code></td>
+<td><code>string</code></td>
+<td>Equipped ids</td>
+</tr>
+<tr>
+<td><code>buildings</code></td>
+<td><code>List&lt;SanctumData&gt;</code></td>
+<td>Placed sanctums</td>
+</tr>
+<tr>
+<td><code>attire</code>, <code>omens</code>, <code>heirlooms</code></td>
+<td><code>List&lt;string&gt;</code></td>
+<td>Owned ids</td>
+</tr>
+<tr>
+<td><code>companionRecords</code> / <code>memorials</code></td>
+<td><code>List&lt;CompanionRecord&gt;</code> / <code>List&lt;MemorialData&gt;</code></td>
+<td>Roster and graves</td>
+</tr>
+</tbody>
+</table>
+<h3 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link">&para;</a></h3>
+<p><code>Core/Settings.cs</code> — persisted options in <code>PlayerPrefs</code> under <code>choth_settings_</code>.
+Every setter persists immediately.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MasterVolume</code></td>
+<td><code>float</code></td>
+<td><code>0.85</code></td>
+<td>Applied to both audio sources</td>
+</tr>
+<tr>
+<td><code>MusicVolume</code> / <code>SfxVolume</code></td>
+<td><code>float</code></td>
+<td><code>0.65</code> / <code>0.85</code></td>
+<td>Music and SFX buses</td>
+</tr>
+<tr>
+<td><code>ScreenShake</code></td>
+<td><code>bool</code></td>
+<td><code>true</code></td>
+<td>Gate for <code>HarvestGame.Shake</code></td>
+</tr>
+<tr>
+<td><code>ReducedMotion</code></td>
+<td><code>bool</code></td>
+<td><code>false</code></td>
+<td>Disables shake and hit stop</td>
+</tr>
+<tr>
+<td><code>Fullscreen</code></td>
+<td><code>bool</code></td>
+<td><code>false</code></td>
+<td>Windowed vs <code>FullScreenWindow</code></td>
+</tr>
+<tr>
+<td><code>FpsCounter</code> / <code>HighContrast</code></td>
+<td><code>bool</code></td>
+<td><code>false</code></td>
+<td>HUD FPS label / palette switch</td>
+</tr>
+<tr>
+<td><code>Autosave</code></td>
+<td><code>bool</code></td>
+<td><code>true</code></td>
+<td>Gate for <code>HarvestSaveSystem.Autosave</code></td>
+</tr>
+<tr>
+<td><code>UiScale</code></td>
+<td><code>float</code></td>
+<td><code>1.0</code></td>
+<td>Clamped 0.8–1.3</td>
+</tr>
+<tr>
+<td><code>Language</code></td>
+<td><code>string</code></td>
+<td><code>"en"</code></td>
+<td>Locale file name</td>
+</tr>
+<tr>
+<td><code>Difficulty</code></td>
+<td><code>int</code></td>
+<td><code>1</code></td>
+<td>0 easy, 1 normal, 2 hard</td>
+</tr>
+<tr>
+<td><code>IncomingDamageMultiplier</code></td>
+<td><code>float</code></td>
+<td>—</td>
+<td>0.7 / 1.0 / 1.3 by difficulty</td>
+</tr>
+<tr>
+<td><code>CreatureHealthMultiplier</code></td>
+<td><code>float</code></td>
+<td>—</td>
+<td>0.85 / 1.0 / 1.2 by difficulty</td>
+</tr>
+<tr>
+<td><code>DifficultyName</code></td>
+<td><code>string</code></td>
+<td>—</td>
+<td><code>"Easy"</code>, <code>"Normal"</code>, <code>"Hard"</code></td>
+</tr>
+<tr>
+<td><code>Load()</code> / <code>Save()</code></td>
+<td><code>void</code></td>
+<td>—</td>
+<td>Read once (<code>loaded</code> latch) / write all keys and flush</td>
+</tr>
+<tr>
+<td><code>SetMaster</code>, <code>SetMusic</code>, <code>SetSfx</code></td>
+<td><code>void</code></td>
+<td>—</td>
+<td>Clamp01 + persist</td>
+</tr>
+<tr>
+<td><code>SetScreenShake</code> … <code>SetAutosave</code></td>
+<td><code>void</code></td>
+<td>—</td>
+<td>Bool flags + persist</td>
+</tr>
+<tr>
+<td><code>SetUiScale</code>, <code>SetLanguage</code>, <code>SetDifficulty</code></td>
+<td><code>void</code></td>
+<td>—</td>
+<td>Clamped/validated + persist</td>
+</tr>
+<tr>
+<td><code>Apply()</code></td>
+<td><code>void</code></td>
+<td>—</td>
+<td>Pushes volumes, UI scale, FPS, contrast, fullscreen and locale</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bindings">Bindings<a class="headerlink" href="#bindings" title="Permanent link">&para;</a></h3>
+<p><code>Core/Controls.cs</code> — rebindable keyboard actions. Movement, digits and Escape are
+fixed and not part of this enum.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Action</code></td>
+<td>nested <code>enum</code></td>
+<td><code>Attack, Dodge, Interact, Build, Companions, Inventory, Map, Quest, Mute, Save, Load, Potion, Rite, Bomb</code></td>
+</tr>
+<tr>
+<td><code>Load()</code></td>
+<td><code>void</code></td>
+<td>Reads <code>choth_bind_&lt;n&gt;</code>, falls back to defaults once</td>
+</tr>
+<tr>
+<td><code>GetKey(Action)</code></td>
+<td><code>UnityEngine.InputSystem.Key</code></td>
+<td>Current key</td>
+</tr>
+<tr>
+<td><code>GetLabel(Action)</code></td>
+<td><code>string</code></td>
+<td><code>Key.ToString()</code></td>
+</tr>
+<tr>
+<td><code>SetKey(Action, Key)</code></td>
+<td><code>void</code></td>
+<td>Assigns and persists</td>
+</tr>
+<tr>
+<td><code>ResetDefaults()</code></td>
+<td><code>void</code></td>
+<td>Restores all 14 defaults and persists</td>
+</tr>
+<tr>
+<td><code>Pressed(Action)</code> / <code>Held(Action)</code></td>
+<td><code>bool</code></td>
+<td><code>wasPressedThisFrame</code> / <code>isPressed</code>, null-safe</td>
+</tr>
+</tbody>
+</table>
+<p>Defaults, in enum order: <code>Space</code>, <code>LeftShift</code>, <code>E</code>, <code>B</code>, <code>F</code>, <code>I</code>, <code>C</code>, <code>J</code>,
+<code>M</code>, <code>F5</code>, <code>F9</code>, <code>H</code>, <code>X</code>, <code>G</code>.</p>
+<h3 id="lexicon">Lexicon<a class="headerlink" href="#lexicon" title="Permanent link">&para;</a></h3>
+<p><code>Core/Localization.cs</code> — JSON localisation. A table is
+<code>{ "entries": [ { "key": "...", "value": "..." } ] }</code> at
+<code>Resources/Localization/&lt;locale&gt;.json</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Locale</code></td>
+<td><code>string</code></td>
+<td>Active locale, default <code>"en"</code></td>
+</tr>
+<tr>
+<td><code>Get(string key, string fallback = null)</code></td>
+<td><code>string</code></td>
+<td>Table value, else fallback, else the key</td>
+</tr>
+<tr>
+<td><code>Format(string key, string fallback, params object[] args)</code></td>
+<td><code>string</code></td>
+<td><code>string.Format</code>; returns the template on format errors</td>
+</tr>
+<tr>
+<td><code>KeyCount</code></td>
+<td><code>int</code></td>
+<td>Loaded key count</td>
+</tr>
+<tr>
+<td><code>SetLocale(string next)</code></td>
+<td><code>void</code></td>
+<td>Switches locale and clears the cache; empty input ignored</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sounddirector">SoundDirector<a class="headerlink" href="#sounddirector" title="Permanent link">&para;</a></h3>
+<p><code>Core/AudioManager.cs</code> — <code>AudioSource</code>-only audio with generated fallback clips.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Instance</code></td>
+<td><code>static SoundDirector</code></td>
+<td>Set in <code>Awake</code></td>
+</tr>
+<tr>
+<td><code>Create(Transform parent)</code></td>
+<td><code>static SoundDirector</code></td>
+<td>Creates the <code>Audio</code> GameObject and component</td>
+</tr>
+<tr>
+<td><code>Muted</code></td>
+<td><code>bool</code></td>
+<td>Mirrors the <code>choth_audio_muted</code> pref</td>
+</tr>
+<tr>
+<td><code>CurrentMusic</code></td>
+<td><code>string</code></td>
+<td>Key of the looping track</td>
+</tr>
+<tr>
+<td><code>ClipCount</code></td>
+<td><code>int</code></td>
+<td>Registered clips</td>
+</tr>
+<tr>
+<td><code>UsedClipCount</code></td>
+<td><code>int</code></td>
+<td>Keys the <code>SoundBank</code> expects to load</td>
+</tr>
+<tr>
+<td><code>PlaceholderClipCount</code></td>
+<td><code>int</code></td>
+<td>How many of those actually loaded from <code>Resources/Audio</code></td>
+</tr>
+<tr>
+<td><code>MissingPlaceholderCount</code></td>
+<td><code>int</code></td>
+<td>Keys with no resource file</td>
+</tr>
+<tr>
+<td><code>Play(string name, float volume = 1f, float pitch = 1f)</code></td>
+<td><code>void</code></td>
+<td>One-shot; pitch clamped 0.55–1.9, volume 0–1</td>
+</tr>
+<tr>
+<td><code>Sfx(string name, float volume = 1f, float pitch = 1f)</code></td>
+<td><code>static void</code></td>
+<td>Null-safe <code>Instance.Play</code></td>
+</tr>
+<tr>
+<td><code>PlayMusic(string key)</code></td>
+<td><code>void</code></td>
+<td>Loops a clip; no-op if it is already playing</td>
+</tr>
+<tr>
+<td><code>ToggleMute()</code> / <code>SetMuted(bool)</code></td>
+<td><code>bool</code> / <code>void</code></td>
+<td>Flips (returns new state) / sets; both persist</td>
+</tr>
+<tr>
+<td><code>SetVolumes(float master, float music, float sfx)</code></td>
+<td><code>void</code></td>
+<td>Clamp01 each, re-applies</td>
+</tr>
+</tbody>
+</table>
+<h3 id="harvestsavesystem">HarvestSaveSystem<a class="headerlink" href="#harvestsavesystem" title="Permanent link">&para;</a></h3>
+<p><code>Core/SaveSystem.cs</code> — slot files, atomic write, <code>.bak</code> recovery, migration.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CurrentVersion</code></td>
+<td><code>const int</code></td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td><code>AutosaveSlot</code> / <code>FirstSlot</code> / <code>SlotCount</code></td>
+<td><code>const int</code></td>
+<td><code>0</code> / <code>1</code> / <code>3</code></td>
+</tr>
+<tr>
+<td><code>ActiveSlot</code></td>
+<td><code>int</code></td>
+<td>PlayerPrefs-backed, clamped 0–3</td>
+</tr>
+<tr>
+<td><code>Save()</code> / <code>Save(int slot)</code></td>
+<td><code>void</code></td>
+<td>Writes <code>.tmp</code>, copies to <code>.bak</code>, replaces the slot</td>
+</tr>
+<tr>
+<td><code>Load()</code> / <code>Load(int slot)</code></td>
+<td><code>bool</code></td>
+<td>Primary, then <code>.bak</code>, then <code>Migrate</code></td>
+</tr>
+<tr>
+<td><code>Exists</code> / <code>SlotExists(int slot)</code></td>
+<td><code>bool</code></td>
+<td>Active slot / any slot, including legacy <code>save.json</code> for slot 1</td>
+</tr>
+<tr>
+<td><code>IsAutosave(int slot)</code></td>
+<td><code>bool</code></td>
+<td><code>slot == 0</code></td>
+</tr>
+<tr>
+<td><code>Delete(int slot)</code></td>
+<td><code>void</code></td>
+<td>Removes the slot, <code>.bak</code>, <code>.tmp</code> and legacy file</td>
+</tr>
+<tr>
+<td><code>SlotSummary(int slot)</code></td>
+<td><code>string</code></td>
+<td><code>"MM-dd HH:mm \| Day N \| Act N"</code> or <code>"empty"</code></td>
+</tr>
+<tr>
+<td><code>Autosave()</code></td>
+<td><code>void</code></td>
+<td><code>Save(0)</code> when <code>Preferences.Autosave</code></td>
+</tr>
+<tr>
+<td><code>UseTestRoot(string name)</code> / <code>UseDefaultRoot()</code></td>
+<td><code>void</code></td>
+<td>Redirect to a scratch folder / restore <code>persistentDataPath</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title"><code>Load</code> mutates global state</p>
+<p>A successful <code>Load</code> assigns <code>HarvestState.Data</code> and calls <code>NotifyChanged</code>
+before returning <code>true</code>; <code>HarvestGame.LoadGame</code> then rebuilds the world. Do
+not call <code>Load</code> from inside a system that still holds old record references.</p>
+</div>
+<h3 id="sagasystem">SagaSystem<a class="headerlink" href="#sagasystem" title="Permanent link">&para;</a></h3>
+<p><code>Core/QuestSystem.cs</code> — the eight-step, state-driven quest chain.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FinalStage</code></td>
+<td><code>const int</code></td>
+<td><code>8</code>; stage 8 is <code>quest.done</code></td>
+</tr>
+<tr>
+<td><code>Stage</code></td>
+<td><code>int</code></td>
+<td><code>Data.questStage</code> clamped 0–8</td>
+</tr>
+<tr>
+<td><code>Complete</code></td>
+<td><code>bool</code></td>
+<td><code>Stage &gt;= FinalStage</code></td>
+</tr>
+<tr>
+<td><code>CurrentTitle</code></td>
+<td><code>string</code></td>
+<td>Localised title for the current step</td>
+</tr>
+<tr>
+<td><code>CurrentLine</code></td>
+<td><code>string</code></td>
+<td><code>"▶ " + CurrentTitle</code></td>
+</tr>
+<tr>
+<td><code>CompletedLine</code></td>
+<td><code>string</code></td>
+<td>Bulleted list of completed steps</td>
+</tr>
+<tr>
+<td><code>ProgressLine</code></td>
+<td><code>string</code></td>
+<td>Campaign act, devotion and <code>JourneyPacing.ShortSummary</code></td>
+</tr>
+<tr>
+<td><code>Evaluate(HarvestGame boot)</code></td>
+<td><code>void</code></td>
+<td>Advances every satisfied step, pays devotion, toasts, plays UI sfx</td>
+</tr>
+</tbody>
+</table>
+<p>The reward is <code>+2</code> devotion, or <code>+4</code> once the new stage is 5 or higher. The
+chain checks, in order: farm built, hymn sung, act 1 cleared, act 2 cleared, act
+3 cleared, temple built, 8 companions, 30 devotion.</p>
+<h3 id="seasoncycle">SeasonCycle<a class="headerlink" href="#seasoncycle" title="Permanent link">&para;</a></h3>
+<p><code>Core/DayCycle.cs</code> — four phases, 60 real seconds each.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PhaseSeconds</code></td>
+<td><code>const float</code></td>
+<td><code>60</code></td>
+</tr>
+<tr>
+<td><code>Phases</code></td>
+<td><code>static string[]</code></td>
+<td><code>Dawn</code>, <code>Day</code>, <code>Dusk</code>, <code>Night</code></td>
+</tr>
+<tr>
+<td><code>PhaseIndex</code></td>
+<td><code>int</code></td>
+<td>0–3</td>
+</tr>
+<tr>
+<td><code>PhaseName</code></td>
+<td><code>string</code></td>
+<td>Localised <code>phase.&lt;name&gt;</code>, falls back to English</td>
+</tr>
+<tr>
+<td><code>IsNight</code></td>
+<td><code>bool</code></td>
+<td>Phase 3</td>
+</tr>
+<tr>
+<td><code>PhaseChanged</code></td>
+<td><code>event Action&lt;int&gt;</code></td>
+<td>Fired on reset and on every advance</td>
+</tr>
+<tr>
+<td><code>ResetToDawn()</code></td>
+<td><code>void</code></td>
+<td>Timer 0, phase 0, repaint, raise the event</td>
+</tr>
+</tbody>
+</table>
+<p><code>Update</code> returns immediately while <code>HarvestGame.InputLocked</code>, so menus freeze the
+clock. Advancing into Dawn increments <code>Data.day</code> and notifies.</p>
+<h3 id="stage3d">Stage3D<a class="headerlink" href="#stage3d" title="Permanent link">&para;</a></h3>
+<p><code>Core/View3D.cs</code> — the presentation layer that keeps gameplay on a flat plane
+while rendering it as a &frac34; perspective scene.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CameraPitch</code> / <code>CameraDistance</code> / <code>CameraFov</code></td>
+<td><code>const float</code></td>
+<td><code>45</code>, <code>10</code>, <code>60</code></td>
+</tr>
+<tr>
+<td><code>BillboardRotation</code></td>
+<td><code>static Quaternion</code></td>
+<td><code>Euler(45, 0, 0)</code></td>
+</tr>
+<tr>
+<td><code>FlatRotation</code></td>
+<td><code>static Quaternion</code></td>
+<td><code>Euler(-90, 0, 0)</code></td>
+</tr>
+<tr>
+<td><code>P(float x, float depth)</code> / <code>P(Vector3 gameplay)</code></td>
+<td><code>Vector3</code></td>
+<td>Gameplay (x, depth) → world <code>(x, 0, depth)</code></td>
+</tr>
+<tr>
+<td><code>Ground(Vector3 world)</code></td>
+<td><code>Vector3</code></td>
+<td>Flattens to <code>y = 0</code></td>
+</tr>
+<tr>
+<td><code>Above(Vector3 ground, float height)</code></td>
+<td><code>Vector3</code></td>
+<td>Offsets along screen-up (0.707 per axis)</td>
+</tr>
+<tr>
+<td><code>SortOrder(Vector3 world, int bias = 0)</code></td>
+<td><code>int</code></td>
+<td><code>2000 - round(z × 10) + bias</code></td>
+</tr>
+<tr>
+<td><code>GlowSprite</code></td>
+<td><code>Sprite</code></td>
+<td>Lazily generated radial alpha sprite</td>
+</tr>
+<tr>
+<td><code>SpriteMaterial</code></td>
+<td><code>Material</code></td>
+<td>URP 2D unlit sprite material, <code>Sprites/Default</code> fallback</td>
+</tr>
+<tr>
+<td><code>AttachBillboard(GameObject root, Sprite, Color, int order, float xOffset = 0)</code></td>
+<td><code>SpriteRenderer</code></td>
+<td>Adds a camera-facing sprite to an existing root</td>
+</tr>
+<tr>
+<td><code>CreateBillboard(Transform parent, string name, Sprite, Vector3 ground, float height, Color, int order, float xOffset = 0, float maxWidth = 0)</code></td>
+<td><code>GameObject</code></td>
+<td>Root + billboard, scaled to a target height</td>
+</tr>
+<tr>
+<td><code>CreateFlat(...)</code></td>
+<td><code>SpriteRenderer</code></td>
+<td>Ground-plane sprite for floors, glows and zones</td>
+</tr>
+<tr>
+<td><code>HorizontalDistance(Vector3 a, Vector3 b)</code></td>
+<td><code>float</code></td>
+<td>XZ distance</td>
+</tr>
+<tr>
+<td><code>CreateShadow(Transform worldParent, Transform follow, float radius)</code></td>
+<td><code>void</code></td>
+<td>Adds a <code>GroundShadow</code> blob</td>
+</tr>
+</tbody>
+</table>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">go</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Stage3D</span><span class="p">.</span><span class="n">CreateBillboard</span><span class="p">(</span><span class="n">hubRoot</span><span class="p">.</span><span class="n">transform</span><span class="p">,</span><span class="w"> </span><span class="s">"Shrine Sanctum"</span><span class="p">,</span><span class="w"> </span><span class="n">sprite</span><span class="p">,</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">Stage3D</span><span class="p">.</span><span class="n">P</span><span class="p">(</span><span class="mf">3f</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">2f</span><span class="p">),</span><span class="w"> </span><span class="mf">2.6f</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">white</span><span class="p">,</span><span class="w"> </span><span class="n">Stage3D</span><span class="p">.</span><span class="n">SortOrder</span><span class="p">(</span><span class="n">Stage3D</span><span class="p">.</span><span class="n">P</span><span class="p">(</span><span class="mf">3f</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">2f</span><span class="p">)));</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">Stage3D</span><span class="p">.</span><span class="n">CreateShadow</span><span class="p">(</span><span class="n">hubRoot</span><span class="p">.</span><span class="n">transform</span><span class="p">,</span><span class="w"> </span><span class="n">go</span><span class="p">.</span><span class="n">transform</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2f</span><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../architecture/bootstrap/">Bootstrap and game loop</a></li>
+<li><a href="../../architecture/state-and-save/">State and save data</a></li>
+<li><a href="../catalogs/">Catalogs API reference</a></li>
+<li><a href="../../getting-started/controls/">Controls</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../architecture/systems-map/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Systems Map">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Systems Map
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../catalogs/" class="md-footer__link md-footer__link--next" aria-label="Next: Catalogs API">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Catalogs API
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Chosen of the Harvest template documentation. All rights reserved.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/camenduru/ChosenOfTheHarvestDoc" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://assetstore.unity.com/templates" target="_blank" rel="noopener" title="assetstore.unity.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M30.7 72.3C37.6 48.4 59.5 32 84.4 32h344c24.9 0 46.8 16.4 53.8 40.3l23.4 80.2c12.8 43.7-20.1 87.5-65.6 87.5-26.3 0-49.4-14.9-60.8-37.1-11.6 21.9-34.6 37.1-61.4 37.1-26.6 0-49.7-15-61.3-37-11.6 22-34.7 37-61.3 37-26.8 0-49.8-15.1-61.4-37.1C122.4 225 99.3 240 73 240c-45.6 0-78.4-43.7-65.6-87.5zM96.4 352h320v-66.4c7.6 1.6 15.5 2.4 23.5 2.4 14.3 0 28-2.6 40.5-7.2V432c0 26.5-21.5 48-48 48h-352c-26.5 0-48-21.5-48-48V280.8c12.5 4.6 26.1 7.2 40.5 7.2 8.1 0 15.9-.8 23.5-2.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
