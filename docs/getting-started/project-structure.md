@@ -89,7 +89,7 @@ Scene** rebuilds it.
 | `ProjectSettings/` | Yes | Player, quality, input and URP settings |
 | `Packages/manifest.json` | Yes | Declared Unity packages |
 | `Tools/build.ps1` | Optional | Local build and smoke helper |
-| `Documentation/` | — | Store-listing screenshots from the smoke run |
+| `BuildLogs/Screenshots/` | **No** | Store-listing screenshots from the smoke run |
 | `Library/`, `Logs/`, `Build/`, `BuildLogs/`, `UserSettings/` | **No** | Generated |
 
 !!! warning "Never ship generated folders"

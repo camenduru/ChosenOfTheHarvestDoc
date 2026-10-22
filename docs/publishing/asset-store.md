@@ -137,7 +137,7 @@ The description should state, near the top:
 ## Screenshots
 
 Capture them from the running build, not from art tools. The bundled smoke test
-does this automatically into `Documentation/Screenshots/`:
+does this automatically into `BuildLogs/Screenshots/`:
 
 | Shot | Shows |
 |---|---|
