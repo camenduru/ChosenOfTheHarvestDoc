@@ -57,7 +57,7 @@ scene to repair — reskin the art, retune the numbers, and it is your game.
 |---|---|
 | **Unity version** | 6000.6.6f1 (Unity 6), Universal Render Pipeline |
 | **Render / input** | URP + 2D renderer, Unity Input System |
-| **Code** | 37 C# files, ~13.5k lines, single `ChosenOfTheHarvest` namespace |
+| **Code** | 40 C# files, ~13.9k lines, single `ChosenOfTheHarvest` namespace |
 | **Scenes** | One bootstrap scene — everything else is generated |
 | **Player** | Movement, dodge with i-frames, 12 armaments, 3 rites, bombs, inventory |
 | **Combat** | 12 creature archetypes, 3 elite modifiers, telegraphed attacks, projectiles, traps |
