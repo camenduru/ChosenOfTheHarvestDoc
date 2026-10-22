@@ -113,7 +113,7 @@ Re-open the project once to confirm it imports cleanly, then upload.
 
 | Field | Suggested value |
 |---|---|
-| **Title** | Chosen of the Harvest — Action Roguelike Template |
+| **Title** | Action Roguelike Template - Chosen of the Harvest |
 | **Category** | Templates → Systems / 2D |
 | **Unity version** | 6000.6.6f1 |
 | **Render pipeline** | Universal Render Pipeline |

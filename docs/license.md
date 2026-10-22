@@ -36,10 +36,10 @@ The full list, with licence references, is in
 
 ## AI disclosure
 
-**Artwork.** The 49 sprites under `Resources/Art` were generated with a
-**ComfyUI** text-to-image workflow from prompts written for this project. They
-were then reviewed, background-removed, cropped, resized and colour-corrected.
-No third-party image was used as an input or style reference.
+**Artwork.** The 49 sprites under `Resources/Art` were generated with an
+**open-source text-to-image diffusion model** from prompts written for this
+project. They were then reviewed, background-removed, cropped, resized and
+colour-corrected. No third-party image was used as an input or style reference.
 
 **Audio.** Not AI-generated. The 21 WAV clips are produced by the project's own
 synthesis code (`Scripts/Core/AudioManager.cs`).
@@ -54,7 +54,7 @@ own store listing. Do not call these images "hand-drawn" or "painted".
 | Role | Credit |
 |---|---|
 | Design, code, systems | Chosen of the Harvest project |
-| Placeholder art | Generated with a ComfyUI workflow |
+| Placeholder art | Generated with an open-source text-to-image model |
 | Placeholder audio | Procedurally synthesised by the project |
 | Engine and packages | Unity Technologies |
 
