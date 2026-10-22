@@ -1,0 +1,137 @@
+site_name: Chosen of the Harvest — Unity Template Docs
+site_description: Official documentation for the Chosen of the Harvest Unity template — a complete code-driven action-roguelike and sanctuary-management framework you can reskin and ship.
+site_author: camenduru
+site_url: https://camenduru.github.io/ChosenOfTheHarvestDoc/
+repo_url: https://github.com/camenduru/ChosenOfTheHarvestDoc
+repo_name: camenduru/ChosenOfTheHarvestDoc
+edit_uri: edit/main/docs/
+copyright: Chosen of the Harvest template documentation. All rights reserved.
+
+theme:
+  name: material
+  language: en
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/camenduru/ChosenOfTheHarvestDoc
+    - icon: fontawesome/solid/store
+      link: https://assetstore.unity.com/templates
+  generator: false
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Your First Run: getting-started/first-run.md
+      - Project Structure: getting-started/project-structure.md
+      - Controls: getting-started/controls.md
+  - Systems:
+      - The Harvesthold Hub: guide/hub-and-companions.md
+      - Expeditions: guide/expeditions.md
+      - Combat & Wardens: guide/combat.md
+      - Building & Sanctums: guide/building.md
+      - Economy & Resources: guide/economy.md
+      - Ceremonies & Omens: guide/ceremonies.md
+      - Campaign & Quests: guide/quests.md
+      - Saving & Loading: guide/save-system.md
+      - Audio: guide/audio.md
+      - Localization: guide/localization.md
+      - HUD Reference: guide/hud.md
+  - Customization:
+      - Rebranding the Template: customization/rebranding.md
+      - Replacing Art: customization/art.md
+      - Replacing Audio: customization/audio.md
+      - Balancing & Tuning: customization/balancing.md
+      - Adding Content: customization/adding-content.md
+      - Input & Rebinding: customization/input.md
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Bootstrap & Game Loop: architecture/bootstrap.md
+      - State & Save Schema: architecture/state-and-save.md
+      - Systems Map: architecture/systems-map.md
+  - Reference:
+      - Core API: reference/core.md
+      - Catalogs API: reference/catalogs.md
+      - Dungeon API: reference/dungeon.md
+      - Followers API: reference/followers.md
+      - Localization Keys: reference/localization-keys.md
+  - Publishing:
+      - Building Players: publishing/building.md
+      - Asset Store Submission: publishing/asset-store.md
+  - Help:
+      - FAQ: faq.md
+      - Troubleshooting: troubleshooting.md
+      - Changelog: changelog.md
+      - License & Credits: license.md
