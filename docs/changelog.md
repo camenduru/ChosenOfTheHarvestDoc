@@ -58,6 +58,9 @@ First public release.
 - Replaced deprecated `FindObjectsByType(FindObjectsSortMode)` and
   `FindFirstObjectByType` calls with their current Unity 6 equivalents, removing
   all obsolete-API compiler warnings.
+- Expeditions and interiors now pin a dark camera backdrop, so the hub's
+  day-cycle tint can no longer show as a bright wedge outside room floors.
+- The title screen subtitle no longer reads "A CLEAN-ROOM STUDY BUILD".
 
 ### Known limitations
 
